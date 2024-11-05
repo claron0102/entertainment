@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      target: prod
+    restart: always
+    volumes:
+      - .:/var/www/html
+    ports:
+      - '9050:80'
